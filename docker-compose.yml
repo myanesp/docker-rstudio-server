@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    rstudio:
+        ports:
+            - '8787:8787'
+        container_name: rstudio_server
+        volumes:
+            - './packages/:/packages'
+            - '/path/to/data/rstudio/:/home/rstudio/work'
+        environment:
+            - PASSWORD=password
+            - USERID=1001
+            - GROUPID=1001
+        image: 'davetang/rstudio:4.2.0'
