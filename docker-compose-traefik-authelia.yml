@@ -1,5 +1,4 @@
 version: '3.9'
-version: "3.9"
 
 services:
   rstudio:
@@ -23,7 +22,7 @@ services:
       - "traefik.http.routers.calibre.middlewares=authelia" # Enables SSO with Authelia
 
   traefik:
-    image: traefik:2.8.8
+    image: traefik:2.9.6
     container_name: traefik
     hostname: traefik
     restart: unless-stopped
