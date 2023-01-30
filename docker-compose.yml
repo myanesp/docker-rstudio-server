@@ -12,3 +12,10 @@ services:
       - USERID=1001
       - GROUPID=1001
     image: 'davetang/rstudio:4.2.2'
+    # Comment the image line if you want to build from source from repo's Dockerfile and uncomment the following one
+    # build: . 
+
+networks:
+  default:
+    external: true
+    name: lan
