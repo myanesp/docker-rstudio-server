@@ -21,4 +21,4 @@ RUN apt-get clean all && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN Rscript -e "install.packages(c('remotes', 'reinstallr')); library(remotes);"
-RUN Rscript -e "remotes::install_github("myanesp/pkcsv");"
+RUN Rscript -e "remotes::install_github("myanesp/pkgcsv");"
