@@ -15,6 +15,7 @@ RUN apt-get clean all && \
 		liblzma-dev \
 		libglpk40 \
 		libgit2-dev \
+		libgdal-dev \
 		libproj-dev \
                 libudunits2-dev \
 	&& apt-get clean all && \
