@@ -12,7 +12,10 @@ services:
       - PASSWORD=password # Change it!!
       - USERID=1001
       - GROUPID=1001
-    image: davetang/rstudio:4.2.0
+    image: davetang/rstudio:4.2.2
+    # Comment the image line if you want to build from source from repo's Dockerfile and uncomment the following one
+    # build: . 
+    
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.rstudio.rule=Host(`your.domain.es`)"
@@ -22,7 +25,7 @@ services:
       - "traefik.http.routers.calibre.middlewares=authelia" # Enables SSO with Authelia
 
   traefik:
-    image: traefik:2.9.6
+    image: traefik:2.9.8
     container_name: traefik
     hostname: traefik
     restart: unless-stopped
